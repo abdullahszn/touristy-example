@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Plans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body,
+        html {
+            margin: 0px;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: url(touristiy-arkaplan-1.png);
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            padding: 15px;
+        }
+
+        .card-title {
+            color: antiquewhite;
+            font-weight: 700;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 35px !important;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <header class="main-header" style="background-color: #af5a21;">
+            <a href="mainpage.html" class="main-header_link"><img style="width: 50px;"
+                    src="Touristiy-Logo-9-150x150.png" alt="Touristiy-Logo-9-150x150"></a>
+            <nav class="main-nav" style="margin: -4px 0px;">
+                <ul class="main-nav_items">
+                    <li class="main-nav_item">
+                        <a href="mainpage.html" class="main-nav_link">Homepage</a>
+                    </li>
+                    <li class="main-nav_item">
+                        <a href="#" class="main-nav_link">About</a>
+                    </li>
+                    <li class="main-nav_item">
+                        <a href="contact.html" class="main-nav_link">Contact</a>
+                    </li>
+                    <li class="main-nav_item">
+                        <a href="start-planning.html" class="main-nav_link main-nav_link__login">Start Planning</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </header>
+    <main>
+        <div class="container">
+            <h1 style="text-align: center; padding: 25px; color: antiquewhite;">Choose Your Plan</h1><br>
+            <div class="cards">
+                <div class="card" style="width: 18rem;background-color: #2E4C6D;margin-right: -5px;">
+                    <img class="card-img-top" src="Touristiy-Logo-7.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Advanced Plan</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="purchase.html" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card card-main"
+                    style="width: 18rem; margin-bottom: 15px;margin-top: -15px; box-shadow: 0px 0px 25px black; z-index: 1; background-color: #de9734;;">
+                    <img class="card-img-top" src="Touristiy-Logo-7.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Free Plan</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="purchase.html" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card " style="width: 18rem;background-color: #2E4C6D; margin-left: -5px;">
+                    <img class="card-img-top" src="Touristiy-Logo-7.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Premium Plan</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="purchase.html" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+        style="background-color: #2E4C6D; margin-bottom: 0!important; margin-top: auto;height: 150px;text-align: center;">
+        <div class="col-md-4 d-flex align-items-center " style="text-align: center;">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-white" style="vertical-align: middle; text-align: center;">© 2024 Abdullah
+                Sezen, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#twitter"></use>
+                    </svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#instagram"></use>
+                    </svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#facebook"></use>
+                    </svg></a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url(touristiy-arkaplan-1.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .message-box {
+            background-color: #dff0d8;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .message-box h1 {
+            color: #3c763d;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 350px;
+        }
+        .button-container a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .home-button {
+            background-color: #007bff;
+        }
+        .continue-button {
+            background-color: #28a745;
+        }
+        .home-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .continue-button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message-box">
+            <h1>Ödemeniz başarılı bir şekilde yapılmıştır :)</h1>
+        </div>
+        <div class="button-container">
+            <a href="mainpage.html" class="home-button">Anasayfaya Dön</a>
+            <a href="start-planning.html" class="continue-button">Alışverişe Devam Et</a>
+        </div>
+    </div>
+</body>
+</html>

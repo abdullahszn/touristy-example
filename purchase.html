@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Credit Card</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        .container {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            background: url(touristiy-arkaplan-1.png)!important;
+            background-position: center;
+            background-size: cover!important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            width: 500px;
+            height: 300px;
+            color: #fff;
+            cursor: pointer;
+            perspective: 1000px;
+        }
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+        .front, .back {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(45deg, #0045c7, #ff2c7d);
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            z-index: 1;
+            backface-visibility: hidden;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card-no {
+            font-size: 35px;
+            margin-top: 60px;
+        }
+        .card-holder {
+            font-size: 12px;
+            margin-top: 40px;
+        }
+        .name {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        .back {
+            transform: rotateY(180deg);
+        }
+        .card:hover .card-inner {
+            transform: rotateY(-180deg);
+        }
+        .card-cvv {
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: right;
+            padding-right: 20px;
+        }
+        .input-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .input-section input {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            width: 300px;
+            font-size: 16px;
+        }
+        .button-section {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .button-section button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .pay-button {
+            background-color: green;
+            color: white;
+        }
+        .clear-button {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="front">
+                    <div class="row card-no" id="card-number">XXXX XXXX XXXX XXXX</div>
+                    <div class="row card-holder">
+                        <p>CARD HOLDER</p>
+                        <p>VALID TILL</p>
+                    </div>
+                    <div class="row name">
+                        <p id="card-name">YOUR NAME</p>
+                        <p id="card-expiry">MM / YY</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="card-cvv">
+                        CVV: <span id="card-cvv">XXX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input-section">
+            <input type="text" id="input-name" placeholder="Cardholder Name" oninput="updateCard()">
+            <input type="text" id="input-number" placeholder="Card Number" maxlength="19" oninput="updateCard()">
+            <input type="text" id="input-expiry" placeholder="Expiry Date (MM/YY)" maxlength="5" oninput="updateCard()">
+            <input type="text" id="input-cvv" placeholder="CVV" maxlength="3" oninput="updateCard()">
+        </div>
+        <div class="button-section">
+            <button class="clear-button" onclick="clearFields()">Temizle</button>
+            <button class="pay-button" onclick="processPayment()">Öde</button>
+        </div>
+    </div>
+    <script>
+        function updateCard() {
+            document.getElementById('card-name').textContent = document.getElementById('input-name').value || 'YOUR NAME';
+            document.getElementById('card-number').textContent = document.getElementById('input-number').value || 'XXXX XXXX XXXX XXXX';
+            document.getElementById('card-expiry').textContent = document.getElementById('input-expiry').value || 'MM / YY';
+            document.getElementById('card-cvv').textContent = document.getElementById('input-cvv').value || 'XXX';
+        }
+        
+        function clearFields() {
+            document.getElementById('input-name').value = '';
+            document.getElementById('input-number').value = '';
+            document.getElementById('input-expiry').value = '';
+            document.getElementById('input-cvv').value = '';
+            updateCard();
+        }
+        
+        function processPayment() {
+            window.location.href = "payment-success.html";
+        }
+    </script>
+</body>
+</html>
